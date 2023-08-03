@@ -2,6 +2,7 @@
     // place files you want to import through the `$lib` alias in this folder.
     import {browser} from '$app/environment'
     import {goto} from '$app/navigation'
+    import logo from '$lib/assets/globe-4-64.png'
     /** @type {string}*/
     let currentPage;
     let b = browser;
@@ -11,7 +12,7 @@
 </script>
 
 <div class="nav">
-    <button on:click={() => {goto('/'); currentPage='/'}}><img alt="logo" class:current={currentPage==='/'}/></button>
+    <button on:click={() => {goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
     
     <div class="links">
         <a href="/about" on:click={()=>currentPage='/about'} class:current={currentPage==='/about'}>About</a>
@@ -54,8 +55,15 @@
         background: none;
         border: none;
         margin-right: auto;
+        height: 100%;
+        display: flex;
+        flex: none;
+        overflow: hidden;
+        align-items: center;
     }
     img{
         color: lightgray;
+        flex: 1;
+        height: 4cqh;
     }
 </style>
