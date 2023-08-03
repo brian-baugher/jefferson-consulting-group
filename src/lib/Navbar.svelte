@@ -10,16 +10,16 @@
         currentPage = window.location.pathname;
     }
 
-    let width = 0;
+    let width = 0; // less then 850 collapse
     $: console.log(width)
 
-    let scrollY = 0;
+    let scrollY = 0; //over 100 switch bkgrnd
     $: console.log(scrollY)
 </script>
 
 <svelte:window bind:innerWidth={width} bind:scrollY={scrollY}/>
 
-<div class="nav">
+<div class="nav" class:black-background={scrollY >= 100}>
     <button on:click={() => {goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
     
     <div class="links">
@@ -43,8 +43,8 @@
         background-color: transparent;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 3cqmin;
-        position: absolute;
-        z-index: 1;
+        position: fixed;
+        z-index: 2;
     }
     a{
         text-decoration: none;
@@ -76,5 +76,12 @@
         color: lightgray;
         flex: 1;
         height: 4cqh;
+    }
+    .hide{
+        display: none;
+    }
+    .black-background{
+        background: black;
+        transition: .5s all ease;
     }
 </style>
