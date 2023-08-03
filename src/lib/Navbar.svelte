@@ -28,11 +28,14 @@
         padding: 0 25vw;
         margin: 0%;
         height: 5vh;
+        width: 100%;
+        box-sizing: border-box;
         align-items: center;
-        background-color: gray;
+        background-color: transparent;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 1.25rem;
-        position: sticky;
+        position: absolute;
+        z-index: 1;
     }
     a{
         text-decoration: none;
