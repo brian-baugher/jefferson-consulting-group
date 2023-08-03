@@ -34,13 +34,16 @@
         align-items: center;
         background-color: transparent;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 1.25rem;
+        font-size: 3cqmin;
         position: absolute;
         z-index: 1;
     }
     a{
         text-decoration: none;
         color: lightgray;
+    }
+    a:hover{
+        color: white;
     }
     .links{
         display: flex;
