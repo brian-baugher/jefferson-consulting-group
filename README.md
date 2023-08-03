@@ -1,2 +1,2 @@
 # jefferson-consulting-group
-Website build for Jefferson Consulting Group at UVA
+Website built for Jefferson Consulting Group at UVA
