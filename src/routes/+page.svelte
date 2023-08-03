@@ -34,19 +34,19 @@
         background-size: cover;
         flex-direction: column;
         gap: 5%;
-        width: 100vw;
+        width: 100%;
         background-position: center;
         max-width: 100%;
-        overflow: hidden;
-        min-width: 100vw;
+        overflow: auto;
+        min-width: 100%;
     }
     .landing::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.40);
-}
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.40);
+    }
 </style>

@@ -9,7 +9,15 @@
     $: if(b){
         currentPage = window.location.pathname;
     }
+
+    let width = 0;
+    $: console.log(width)
+
+    let scrollY = 0;
+    $: console.log(scrollY)
 </script>
+
+<svelte:window bind:innerWidth={width} bind:scrollY={scrollY}/>
 
 <div class="nav">
     <button on:click={() => {goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
