@@ -21,6 +21,7 @@
         height: 100vh;
         box-sizing: border-box;
         background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .left-image{
         padding-right: 40%;

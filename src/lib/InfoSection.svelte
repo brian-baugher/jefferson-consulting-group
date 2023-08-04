@@ -42,10 +42,23 @@
         text-align: center;
         padding-top: 5%;
         box-sizing: border-box;
+        font-weight: 100;
+    }
+    h1{
+        margin-bottom: 1cqh;
+        font-size: 3.75cqmin;
+    }
+    p, h1{
+        text-align: left;
+        padding-left: 1cqw;
     }
     .mobile{
         margin: 0;
         justify-content: center;
         align-items: center;
+    }
+    .mobile *{
+        text-align: center;
+        padding-left: 0;
     }
 </style>
