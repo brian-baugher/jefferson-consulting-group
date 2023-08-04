@@ -3,6 +3,7 @@
     import {browser} from '$app/environment'
     import {goto} from '$app/navigation'
     import logo from '$lib/assets/globe-4-64.png'
+    import MdMoreHoriz from 'svelte-icons/md/MdMoreHoriz.svelte'
     /** @type {string}*/
     let currentPage;
     let b = browser;
@@ -12,26 +13,47 @@
 
     let width = 0; // less then 850 collapse
     $: console.log(width)
+    $: smallPage = width < 850
+    $: showDropdown = false && smallPage;
 
     let scrollY = 0; //over 100 switch bkgrnd
     $: console.log(scrollY)
+    $: scrolledDown = scrollY >= 100
+
+    const links = [
+        {path: '/about', name: 'About'},
+        {path: '/projects', name: 'Projects'},
+        {path: '/leadership', name: 'Leadership'},
+        {path: '/careers', name: 'Careers'},
+    ]
 </script>
 
 <svelte:window bind:innerWidth={width} bind:scrollY={scrollY}/>
 
-<div class="nav" class:black-background={scrollY >= 100}>
+<div class="nav" class:black-background={ scrolledDown || showDropdown}>
     <button on:click={() => {goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
     
-    <div class="links">
-        <a href="/about" on:click={()=>currentPage='/about'} class:current={currentPage==='/about'}>About</a>
-        <a href="/projects" on:click={()=>currentPage='/projects'} class:current={currentPage==='/projects'}>Projects</a>
-        <a href="/leadership" on:click={()=>currentPage='/leadership'} class:current={currentPage==='/leadership'}>Leadership</a>
-        <a href="/careers" on:click={()=>currentPage='/careers'} class:current={currentPage==='/careers'}>Careers</a>
+    <div class="links" class:hide={smallPage}>
+        {#each links as link}
+        <a href={link.path} on:click={()=>currentPage=link.path} class:current={currentPage===link.path}>{link.name}</a>
+        {/each}
     </div>
+    <button class="dropdown-btn" on:click={()=>showDropdown=!showDropdown} class:hide={!smallPage}><MdMoreHoriz /></button>
 </div>
 
+<div class="dropdown" class:invis={!showDropdown} class:black-background={scrolledDown || showDropdown}>
+    {#each links as link}
+        <a href={link.path} on:click={()=>currentPage=link.path} class:current={currentPage===link.path}>{link.name}</a>
+    {/each}
+</div>
 
 <style>
+    .invis{
+        visibility: hidden;
+        opacity: 0 !important;
+        pointer-events: none;
+        transform: translateY(-35%);
+    }
     .nav{
         display: flex;
         padding: 0 25vw;
@@ -49,6 +71,20 @@
     a{
         text-decoration: none;
         color: lightgray;
+    }
+    
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        position: fixed;
+        z-index: 2;
+        top: 5vh;
+        padding: 1vh 25vw;
+        gap: 1cqh;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
     }
     a:hover{
         color: white;
@@ -71,6 +107,12 @@
         flex: none;
         overflow: hidden;
         align-items: center;
+        color: lightgray;
+        font-size: 3cqmin;
+    }
+    .dropdown-btn{
+        margin-left: auto;
+        margin-right: 0;
     }
     img{
         color: lightgray;
@@ -83,5 +125,8 @@
     .black-background{
         background: black;
         transition: .5s all ease;
+    }
+    button:hover{
+        color: white;
     }
 </style>
