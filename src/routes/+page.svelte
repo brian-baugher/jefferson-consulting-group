@@ -1,16 +1,33 @@
 <script>
-    import background from '$lib/assets/uva_rotunda_dome.jpg'
+    import background from '$lib/assets/uva_rotunda_dome.jpg';
+    import InfoSection from '$lib/InfoSection.svelte';
+    let width = 0;
+    $: mobile = width < 850;
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <div class="landing" style="background-image: url({background});">
 <h1>Jefferson Consulting Group</h1>
 <p>Virginia's leading consultants</p>
 <button>Join today</button>
 </div>
-<div class="landing"></div> <!--TODO: REMOVE ME-->
+<div class="banner left-image" class:mobile><InfoSection mobile={mobile}/></div>
 
 
 <style>
+    .banner{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: black;
+    }
+    .left-image{
+        padding-right: 40%;
+    }
+    .mobile{
+        padding: 0;
+    }
     button{
         border: solid lightblue .2vmin;
         padding: 2vmin;
