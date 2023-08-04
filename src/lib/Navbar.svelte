@@ -31,7 +31,7 @@
 <svelte:window bind:innerWidth={width} bind:scrollY={scrollY}/>
 
 <div class="nav" class:black-background={ scrolledDown || showDropdown}>
-    <button on:click={() => {goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
+    <button on:click={() => {showDropdown=false; goto('/'); currentPage='/'}}><img src={logo} alt="logo" class:current={currentPage==='/'}/></button>
     
     <div class="links" class:hide={smallPage}>
         {#each links as link}
@@ -43,7 +43,7 @@
 
 <div class="dropdown" class:invis={!showDropdown} class:black-background={scrolledDown || showDropdown}>
     {#each links as link}
-        <a href={link.path} on:click={()=>currentPage=link.path} class:current={currentPage===link.path}>{link.name}</a>
+        <a href={link.path} on:click={()=>{showDropdown=false;currentPage=link.path}} class:current={currentPage===link.path}>{link.name}</a>
     {/each}
 </div>
 
