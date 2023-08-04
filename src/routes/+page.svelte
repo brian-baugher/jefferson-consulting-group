@@ -5,11 +5,22 @@
 <div class="landing" style="background-image: url({background});">
 <h1>Jefferson Consulting Group</h1>
 <p>Virginia's leading consultants</p>
+<button>Join today</button>
 </div>
 <div class="landing"></div> <!--TODO: REMOVE ME-->
 
 
 <style>
+    button{
+        border: solid lightblue .2vmin;
+        padding: 2vmin;
+        font-size: 4cqmin;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: transparent;
+        color: white;
+        z-index: 1;
+        border-radius: 10px;
+    }
     h1{
         font-size: 10cqmin;
         font-weight: 300;
