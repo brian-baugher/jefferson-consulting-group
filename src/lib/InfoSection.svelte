@@ -1,14 +1,18 @@
 <script>
-    import picture from '$lib/assets/cavman.jpg' // placeholder for a second, will export as prop
     /**@type {boolean}*/
     export let mobile;
+    /**@type {String}*/
+    export let title;
+    /**@type {String}*/
+    export let text;
+    export let picture;
 </script>
 
 <div class="info-section" class:mobile style="background-image: url({picture});">
         <div class="row" class:mobile>
             <div class="text-content" class:mobile>
-                <h1>Title</h1>  <!--  export as prop -->
-                <p>Description</p> <!--  export as prop -->
+                <h1>{title}</h1>
+                <p>{text}</p> 
             </div>
         </div>
 </div>
@@ -25,7 +29,7 @@
         background-size: cover;
         display: flex;
         align-items: flex-end;
-        height: 100%;
+        height: 100vh;
         box-sizing: border-box;
     }
     .row{

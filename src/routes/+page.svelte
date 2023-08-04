@@ -1,6 +1,7 @@
 <script>
     import background from '$lib/assets/uva_rotunda_dome.jpg';
     import InfoSection from '$lib/InfoSection.svelte';
+    import cavman from '$lib/assets/cavman.jpg'
     let width = 0;
     $: mobile = width < 850;
 </script>
@@ -12,16 +13,18 @@
 <p>Virginia's leading consultants</p>
 <button>Join today</button>
 </div>
-<div class="banner left-image" class:mobile><InfoSection mobile={mobile}/></div>
+<div class="banner left-image" class:mobile><InfoSection mobile={mobile} picture={cavman} title='Title' text='Mollit anim commodo laboris officia reprehenderit id cupidatat eiusmod ad ad enim. Dolor id exercitation magna occaecat sit mollit ad eu aliqua sint. Commodo culpa veniam occaecat officia ullamco amet velit dolor laborum proident commodo officia ullamco. Fugiat consequat commodo ut labore voluptate duis ex dolor deserunt dolore irure. Non do exercitation elit duis deserunt mollit.'/></div>
 
 
 <style>
     .banner{
         width: 100%;
-        height: 100vh;
+        height: 110vh;
         box-sizing: border-box;
         background-color: black;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
     }
     .left-image{
         padding-right: 40%;
