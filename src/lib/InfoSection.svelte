@@ -41,7 +41,7 @@
     .text-content{
         background-color: black;
         width: 40cqw;
-        height: 40cqh;
+        min-height: 40cqh;
         margin-right: -15cqw;
         text-align: center;
         padding-top: 5%;
@@ -56,6 +56,9 @@
         text-align: left;
         padding-left: 1cqw;
     }
+    p{
+        font-size: 2.75cqmin;
+    }
     .mobile{
         margin: 0;
         justify-content: center;
@@ -64,5 +67,8 @@
     .mobile *{
         text-align: center;
         padding-left: 0;
+    }
+    .text-content.mobile{
+        width: 60cqw;
     }
 </style>
