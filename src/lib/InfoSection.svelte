@@ -1,5 +1,5 @@
 <script>
-    import picture from '$lib/assets/uva_rotunda_dome.jpg' // placeholder for a second, will export as prop
+    import picture from '$lib/assets/cavman.jpg' // placeholder for a second, will export as prop
     /**@type {boolean}*/
     export let mobile;
 </script>
