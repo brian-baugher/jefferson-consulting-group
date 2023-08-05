@@ -18,21 +18,6 @@
 <div class="banner right-image" class:mobile><InfoSection right {mobile} picture={jpj} title='Title' text='Nostrud ut sit exercitation incididunt est dolor ullamco amet eu quis. Laborum labore duis qui ea aute consectetur labore elit aute ex consectetur in occaecat. Officia nulla proident esse do dolor nisi excepteur. Exercitation deserunt consectetur veniam voluptate consequat nisi ea laborum reprehenderit occaecat nulla. Aliqua cupidatat ea elit id proident in velit adipisicing. Officia reprehenderit cupidatat nostrud Lorem eiusmod.' /> </div>
 
 <style>
-    .banner{
-        width: 100%;
-        height: 110vh;
-        box-sizing: border-box;
-        background-color: black;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        display: flex;
-        align-items: center;
-    }
-    .left-image{
-        padding-right: 40%;
-    }
-    .right-image{
-        padding-left: 40%;
-    }
     .mobile{
         padding: 0;
     }
