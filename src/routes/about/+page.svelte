@@ -1,5 +1,6 @@
 <script>
-	import InfoSection from "$lib/InfoSection.svelte";
+	import InfoBox from "$lib/InfoBox.svelte";
+import InfoSection from "$lib/InfoSection.svelte";
     import lecture from '$lib/assets/lecture.jpg'
     let width = 0;
     $: mobile = width < 850;
@@ -8,7 +9,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <div class="about">
-    <div class="small-banner">About</div>
+    <div class="small-banner"><InfoBox/></div>
 </div>
 <div class="banner left-image" class:mobile>
     <InfoSection title='Title' text='Exercitation in veniam sint occaecat nostrud in veniam est quis sunt mollit in. Quis amet cillum enim ipsum consectetur adipisicing labore ad laboris sint cupidatat. Aliquip aliqua ipsum dolore eu ex minim tempor laborum excepteur proident deserunt nulla.' picture={lecture} {mobile}/>
@@ -40,6 +41,5 @@
 
     .small-banner{
         justify-content: center;
-        border: solid pink;
     }
 </style>
