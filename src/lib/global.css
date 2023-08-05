@@ -2,14 +2,23 @@
     width: 100%;
     height: 110vh;
     box-sizing: border-box;
-    background-color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    align-items: center;
 }
 .left-image{
     padding-right: 40%;
 }
 .right-image{
     padding-left: 40%;
+}
+
+.small-banner{
+    width: 100%;
+    height: 70vh;
+    box-sizing: border-box;
+}
+
+.banner, .small-banner{
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
 }
