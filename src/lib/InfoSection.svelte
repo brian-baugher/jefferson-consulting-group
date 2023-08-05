@@ -6,11 +6,12 @@
     /**@type {String}*/
     export let text;
     export let picture;
+    export let right = false;
 </script>
 
 <div class="info-section" class:mobile style="background-image: url({picture});">
-        <div class="row" class:mobile>
-            <div class="text-content" class:mobile>
+        <div class="row" class:mobile class:right>
+            <div class="text-content" class:right class:mobile>
                 <h1>{title}</h1>
                 <p>{text}</p> 
             </div>
@@ -38,6 +39,9 @@
         justify-content: end;
         margin-bottom: 7cqh;
     }
+    .row.right{
+        justify-content: start;
+    }
     .text-content{
         background-color: black;
         width: 40cqw;
@@ -47,6 +51,10 @@
         padding-top: 5%;
         box-sizing: border-box;
         font-weight: 100;
+    }
+    .text-content.right{
+        margin-right: 0;
+        margin-left: -15cqw;
     }
     h1{
         margin-bottom: 1cqh;
@@ -60,9 +68,9 @@
         font-size: 2.75cqmin;
     }
     .mobile{
-        margin: 0;
-        justify-content: center;
-        align-items: center;
+        margin: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     .mobile *{
         text-align: center;
