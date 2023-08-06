@@ -12,7 +12,12 @@
 <div class="landing" style="background-image: url({memorial});">
 	<h1>About Us</h1>
 </div>
-<div class="small-banner"><InfoBox /></div>
+<div class="small-banner">
+	<InfoBox>
+		<h1 class="info">Our Mission</h1>
+		<p class="info">Ex dolor ea consequat ex laborum.</p>
+	</InfoBox>	
+</div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
 		title="Title"
@@ -34,5 +39,12 @@
 	.small-banner {
 		justify-content: center;
 		color: white;
+	}
+
+	h1.info {
+		font-size: 5cqmin;
+	}
+	p.info {
+		font-size: 3cqmin;
 	}
 </style>

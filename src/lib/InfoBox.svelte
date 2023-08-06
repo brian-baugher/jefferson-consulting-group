@@ -1,6 +1,5 @@
 <div class="info">
-	<h1>Our Mission</h1>
-	<p>Ex dolor ea consequat ex laborum.</p>
+	<slot />
 </div>
 
 <style>
@@ -14,11 +13,5 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-	.info h1 {
-		font-size: 5cqmin;
-	}
-	.info p {
-		font-size: 3cqmin;
 	}
 </style>
