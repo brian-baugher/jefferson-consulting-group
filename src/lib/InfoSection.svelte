@@ -48,7 +48,6 @@
 		min-height: 40cqh;
 		margin-right: -15cqw;
 		text-align: center;
-		padding-top: 5%;
 		box-sizing: border-box;
 		font-weight: 100;
 	}
@@ -58,6 +57,7 @@
 	}
 	h1 {
 		margin-bottom: 1cqh;
+		margin-top: 1cqh;
 		font-size: 3.75cqmin;
 	}
 	p,
@@ -67,6 +67,7 @@
 	}
 	p {
 		font-size: 2.75cqmin;
+		margin-bottom: 1cqh;
 	}
 	.mobile {
 		margin: 0 !important;
