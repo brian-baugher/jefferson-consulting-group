@@ -1,38 +1,36 @@
-# create-svelte
+# Jefferson Consulting Group
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## About
 
-## Creating a project
+Site live at [`Jefferson Consulting Group`](https://storied-concha-d0585a.netlify.app/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+Hosted on Netlify.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Powered by SvelteKit.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Navigating the codebase
+
+```src``` contains all the code files you need to be concerned with.
+
+- ```src/routes``` has all the different pages.
+    - ```+layout.svelte``` is the base layout for the site with the navbar and a slot for the rest of the page
+    - ```+page.svelte``` is present in ```/routes``` and each subfolder (the name of the subfolder being the path) - it contains what is rendered on the page
+
+- ```src/lib``` has all the files you would want to import
+    - ```lib/assets``` has all your images
+    - You also have all your reuseable compenents in this folder
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the repo, run these commands to startup a locally hosted version of the site.
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+npm install
 npm run dev -- --open
 ```
 
-## Building
+## Deploying
 
-To create a production version of your app:
+This site is hosted on Netlify, pushes to ```main``` will automatically deploy changes.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Pull Requests to ```main``` will create a preview version of the site to view changes before merge.
