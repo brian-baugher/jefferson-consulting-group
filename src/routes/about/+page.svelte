@@ -2,15 +2,17 @@
 	import InfoBox from '$lib/InfoBox.svelte';
 	import InfoSection from '$lib/InfoSection.svelte';
 	import lecture from '$lib/assets/lecture.jpg';
+	import memorial from '$lib/assets/memorial.jpg'
 	let width = 0;
 	$: mobile = width < 850;
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
-<div class="about">
-	<div class="small-banner"><InfoBox /></div>
+<div class="landing" style="background-image: url({memorial});">
+	<h1>About Us</h1>
 </div>
+<div class="small-banner"><InfoBox /></div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
 		title="Title"
@@ -21,23 +23,21 @@
 </div>
 
 <style>
-	.about {
-		height: 100vh;
-		width: 100%;
-		background-color: black;
+	h1 {
+		font-size: 10cqmin;
+		font-weight: 300;
+	}
+	h1 {
 		margin: 0;
 		padding: 0;
-		overflow: auto;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		color: white;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+			Geneva, Verdana, sans-serif;
+		z-index: 1;
+		text-align: center;
 	}
 	.mobile {
 		padding: 0;
-	}
-	.about * {
-		color: white;
 	}
 	.banner {
 		color: white;
@@ -46,5 +46,6 @@
 
 	.small-banner {
 		justify-content: center;
+		color: white;
 	}
 </style>
