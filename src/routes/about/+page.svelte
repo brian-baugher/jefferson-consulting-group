@@ -2,7 +2,8 @@
 	import InfoBox from '$lib/InfoBox.svelte';
 	import InfoSection from '$lib/InfoSection.svelte';
 	import lecture from '$lib/assets/lecture.jpg';
-	import memorial from '$lib/assets/memorial.jpg'
+	import memorial from '$lib/assets/memorial.jpg';
+	import hilton from '$lib/assets/hilton.png'
 	let width = 0;
 	$: mobile = width < 850;
 </script>
@@ -28,11 +29,19 @@
 </div>
 <div class="banner" class:mobile>
 	<InfoBox>
-		<h1 class="info">Our Sponsors</h1>
+		<h1 class="info">Our Sponsors</h1> <!--add a wraper div when we add more logos-->
+		<div class="hilton sponsor-spot">
+			<img class='info' src={hilton} alt="hilton"/>
+			<p class="info small">Excepteur eiusmod anim incididunt enim occaecat cillum nulla consectetur incididunt pariatur ullamco irure velit. Incididunt proident eiusmod exercitation ullamco labore id dolor in fugiat. Minim et dolor mollit eu ipsum laboris mollit fugiat Lorem ad. Laboris ut mollit mollit reprehenderit consectetur eu cillum in. Eiusmod labore magna est esse quis.</p>
+		</div>
 	</InfoBox>
 </div>
 
 <style>
+	.sponsor-spot{
+		display: flex;
+		align-items: center;
+	}
 	.mobile {
 		padding: 0;
 	}
@@ -51,5 +60,11 @@
 	}
 	p.info {
 		font-size: 3cqmin;
+	}
+	img.info{
+		height: 15vh;
+	}
+	.small{
+		font-size: 1.5cqmin !important;
 	}
 </style>
