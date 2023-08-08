@@ -26,6 +26,11 @@
 		{mobile}
 	/>
 </div>
+<div class="banner" class:mobile>
+	<InfoBox>
+		<h1 class="info">Our Sponsors</h1>
+	</InfoBox>
+</div>
 
 <style>
 	.mobile {
