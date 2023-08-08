@@ -1,6 +1,7 @@
 .banner {
 	width: 100%;
-	height: 110vh;
+	min-height: 110vh;
+    height: fit-content;
 	box-sizing: border-box;
 }
 .left-image {

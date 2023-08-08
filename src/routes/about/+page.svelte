@@ -29,19 +29,25 @@
 	/>
 </div>
 <div class="banner" class:mobile>
-	<InfoBox>
-		<h1 class="info">Our Sponsors</h1> <!--add a wraper div when we add more logos-->
+	<InfoBox mobile={mobile}>
+		<h1 class="info" class:mobile>Our Sponsors</h1> <!--add a wraper div when we add more logos-->
 		<div class="sponsor-container">
-			<div class="hilton sponsor-spot">
-				<img class='info' src={hilton} alt="hilton"/>
+			<div class="hilton sponsor-spot" class:mobile>
+				<a href='https://www.hilton.com/en/' target="_blank"> 
+					<img class='info' src={hilton} alt="hilton"/>
+				</a>
 				<p class="info small">Excepteur eiusmod anim incididunt enim occaecat cillum nulla consectetur incididunt pariatur ullamco irure velit. Incididunt proident eiusmod exercitation ullamco labore id dolor in fugiat. Minim et dolor mollit eu ipsum laboris mollit fugiat Lorem ad. Laboris ut mollit mollit reprehenderit consectetur eu cillum in. Eiusmod labore magna est esse quis.</p>
 			</div>
-			<div class="sponsor-spot">
-				<img class="info" src={company} alt='company' />
+			<div class="sponsor-spot" class:mobile>
+				<a href='https://www.google.com/' target="_blank"> 
+					<img class="info" src={company} alt='company' />
+				</a>
 				<p class="info small">Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris. Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse. Mollit cupidatat non adipisicing id aliquip pariatur.</p>
 			</div>
-			<div class="sponsor-spot">
-				<img class="info" src={company} alt='company' />
+			<div class="sponsor-spot" class:mobile>
+				<a href='https://www.google.com/' target="_blank"> 
+					<img class="info" src={company} alt='company' />
+				</a>
 				<p class="info small">Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris. Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse. Mollit cupidatat non adipisicing id aliquip pariatur.</p>
 			</div>
 		</div>
@@ -50,6 +56,9 @@
 </div>
 
 <style>
+	h1.mobile{
+		font-size: 5cqh !important;
+	}
 	.sponsor-container{
 		display: flex;
 		flex-direction: column;
@@ -59,6 +68,17 @@
 		display: flex;
 		align-items: center;
 		gap: 10%;
+	}
+	.mobile.sponsor-spot{
+		flex-direction: column;
+	}
+	.mobile.sponsor-spot img{
+		height: 25cqh;
+		width: 25cqh;
+	}
+	.mobile.sponsor-spot p{
+		font-size: 2cqh !important;
+		text-align: center;
 	}
 	.mobile {
 		padding: 0;
@@ -80,10 +100,25 @@
 		font-size: 3cqmin;
 	}
 	img.info{
-		height: 15vmin;
-		width: 15vmin;
+		height: 17vmin;
+		width: 17vmin;
 	}
 	.small{
-		font-size: 1.5cqmin !important;
+		font-size: 2cqmin !important;
+	}
+	.sponsor-spot > a{
+		border: none;
+		margin: 0;
+		padding: 0;
+		height: fit-content;
+		width: fit-content;
+		box-sizing: border-box;
+		align-items: center;
+		display: flex;
+		transition: .5s all ease;
+	}
+
+	.sponsor-spot > a:hover{
+		transform: scale(110%);
 	}
 </style>
