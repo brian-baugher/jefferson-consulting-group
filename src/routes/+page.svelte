@@ -40,8 +40,7 @@
 		border: solid lightblue 0.2vmin;
 		padding: 2vmin;
 		font-size: 4cqmin;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
-			Geneva, Verdana, sans-serif;
+		font-family: Roboto, 'serif';
 		background-color: transparent;
 		color: white;
 		z-index: 1;

@@ -1,9 +1,16 @@
-<div class="info">
-	<h1>Our Mission</h1>
-	<p>Ex dolor ea consequat ex laborum.</p>
+<script>
+	export let mobile = false;
+</script>
+
+<div class="info" class:mobile>
+	<slot />
 </div>
 
 <style>
+	div.mobile{
+		width: 95%;
+		height: 95%;
+	}
 	.info {
 		width: 60%;
 		height: 70%;
@@ -14,11 +21,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-	.info h1 {
-		font-size: 5cqmin;
-	}
-	.info p {
-		font-size: 3cqmin;
+		padding: 3%;
 	}
 </style>

@@ -88,8 +88,7 @@
 		box-sizing: border-box;
 		align-items: center;
 		background-color: transparent;
-		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
-			sans-serif;
+		font-family: Roboto, 'serif';
 		font-size: 3cqmin;
 		position: fixed;
 		z-index: 2;
