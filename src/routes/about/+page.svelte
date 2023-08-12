@@ -32,19 +32,19 @@
 	<InfoBox mobile={mobile}>
 		<h1 class="info" class:mobile>Our Sponsors</h1> <!--add a wraper div when we add more logos-->
 		<div class="sponsor-container">
-			<div class="hilton sponsor-spot" class:mobile>
+			<div class="hilton sponsor-row" class:mobile>
 				<a href='https://www.hilton.com/en/' target="_blank"> 
 					<img class='info' src={hilton} alt="hilton"/>
 				</a>
 				<p class="info small">Excepteur eiusmod anim incididunt enim occaecat cillum nulla consectetur incididunt pariatur ullamco irure velit. Incididunt proident eiusmod exercitation ullamco labore id dolor in fugiat. Minim et dolor mollit eu ipsum laboris mollit fugiat Lorem ad. Laboris ut mollit mollit reprehenderit consectetur eu cillum in. Eiusmod labore magna est esse quis.</p>
 			</div>
-			<div class="sponsor-spot" class:mobile>
+			<div class="sponsor-row" class:mobile>
 				<a href='https://www.google.com/' target="_blank"> 
 					<img class="info" src={company} alt='company' />
 				</a>
 				<p class="info small">Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris. Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse. Mollit cupidatat non adipisicing id aliquip pariatur.</p>
 			</div>
-			<div class="sponsor-spot" class:mobile>
+			<div class="sponsor-row" class:mobile>
 				<a href='https://www.google.com/' target="_blank"> 
 					<img class="info" src={company} alt='company' />
 				</a>
@@ -64,19 +64,19 @@
 		flex-direction: column;
 		gap: 2vh;
 	}
-	.sponsor-spot{
+	.sponsor-row{
 		display: flex;
 		align-items: center;
 		gap: 10%;
 	}
-	.mobile.sponsor-spot{
+	.mobile.sponsor-row{
 		flex-direction: column;
 	}
-	.mobile.sponsor-spot img{
+	.mobile.sponsor-row img{
 		height: 25cqh;
 		width: 25cqh;
 	}
-	.mobile.sponsor-spot p{
+	.mobile.sponsor-row p{
 		font-size: 2cqh !important;
 		text-align: center;
 	}
@@ -106,7 +106,7 @@
 	.small{
 		font-size: 2cqmin !important;
 	}
-	.sponsor-spot > a{
+	.sponsor-row > a{
 		border: none;
 		margin: 0;
 		padding: 0;
@@ -118,7 +118,7 @@
 		transition: .5s all ease;
 	}
 
-	.sponsor-spot > a:hover{
+	.sponsor-row > a:hover{
 		transform: scale(110%);
 	}
 </style>
