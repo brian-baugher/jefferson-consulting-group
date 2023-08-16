@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
 	import InfoBox from '$lib/InfoBox.svelte';
 	import InfoSection from '$lib/InfoSection.svelte';
 	import lecture from '$lib/assets/lecture.jpg';
 	import memorial from '$lib/assets/memorial.jpg';
 	import hilton from '$lib/assets/hilton.jpg'
 	import company from '$lib/assets/company.jpg'
+	
 	let width = 0;
 	$: mobile = width < 850;
 </script>

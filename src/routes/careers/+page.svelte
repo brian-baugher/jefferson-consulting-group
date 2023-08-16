@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import humpback from '$lib/assets/humpback.jpg'
 </script>
 

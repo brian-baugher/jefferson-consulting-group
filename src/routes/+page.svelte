@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	import background from '$lib/assets/uva_rotunda_dome.jpg';
 	import InfoSection from '$lib/InfoSection.svelte';
 	import cavman from '$lib/assets/cavman.jpg';
 	import jpj from '$lib/assets/jpj.jpg';
+
 	let width = 0;
 	$: mobile = width < 850;
 </script>

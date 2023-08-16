@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import gilmer from '$lib/assets/gilmer.jpg'
 </script>
 
