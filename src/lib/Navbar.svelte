@@ -1,23 +1,29 @@
-<script>
-	// place files you want to import through the `$lib` alias in this folder.
+<!--
+	@component
+	Classic responsive Navbar component 
+	- doesn't require any props
+	- hardcoded routes matching routes in filetree
+	
+	In ```+layout.svelte``` so you shouldn't have to worry about it	
+-->
+
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import logo from '$lib/assets/globe-4-64.png';
-	import MdMoreHoriz from 'svelte-icons/md/MdMoreHoriz.svelte';
-	/** @type {string}*/
-	let currentPage;
-	let b = browser;
-	$: if (b) {
+	import Icon from '@iconify/svelte';
+
+	let currentPage : string;
+	let inBrowser = browser;
+	$: if (inBrowser) {
 		currentPage = window.location.pathname;
 	}
 
 	let width = 0; // less then 850 collapse
-	$: console.log(width);
 	$: smallPage = width < 850;
 	$: showDropdown = false && smallPage;
 
 	let scrollY = 0; //over 100 switch bkgrnd
-	$: console.log(scrollY);
 	$: scrolledDown = scrollY >= 100;
 
 	const links = [
@@ -36,8 +42,8 @@
 			showDropdown = false;
 			goto('/');
 			currentPage = '/';
-		}}><img src={logo} alt="logo" class:current={currentPage === '/'} /></button
-	>
+		}}><img src={logo} alt="logo" class:current={currentPage === '/'} />
+	</button>
 
 	<div class="links" class:hide={smallPage}>
 		{#each links as link}
@@ -51,8 +57,8 @@
 	<button
 		class="dropdown-btn"
 		on:click={() => (showDropdown = !showDropdown)}
-		class:hide={!smallPage}><MdMoreHoriz /></button
-	>
+		class:hide={!smallPage}><Icon icon="ri:more-fill" width='50' />
+	</button>
 </div>
 
 <div

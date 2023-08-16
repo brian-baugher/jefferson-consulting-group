@@ -1,5 +1,17 @@
-<script>
-	export let mobile = false;
+<!--
+	@component
+	Composable styled section wrapping a default slot
+
+	Usage:
+	```tsx
+	<InfoBox {mobile}>
+		<div> your content </div>
+	</InfoBox>
+	```
+-->
+
+<script lang="ts">
+	export let mobile : boolean;
 </script>
 
 <div class="info" class:mobile>
