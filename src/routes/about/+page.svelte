@@ -29,7 +29,7 @@
 	/>
 </div>
 <div class="banner" class:mobile>
-	<InfoBox mobile={mobile}>
+	<InfoBox {mobile}>
 		<h1 class="info" class:mobile>Our Sponsors</h1> <!--add a wraper div when we add more logos-->
 		<div class="sponsor-container">
 			<div class="hilton sponsor-row" class:mobile>

@@ -11,7 +11,7 @@
 -->
 
 <script lang="ts">
-	export let mobile : boolean;
+	export let mobile = false;
 </script>
 
 <div class="info" class:mobile>
