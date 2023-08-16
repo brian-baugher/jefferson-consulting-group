@@ -45,5 +45,5 @@
 		background-color: transparent;
 		color: white;
 		z-index: 1;
-	}	
+	}
 </style>

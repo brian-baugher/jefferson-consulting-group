@@ -13,7 +13,7 @@
 	import logo from '$lib/assets/globe-4-64.png';
 	import Icon from '@iconify/svelte';
 
-	let currentPage : string;
+	let currentPage: string;
 	let inBrowser = browser;
 	$: if (inBrowser) {
 		currentPage = window.location.pathname;
@@ -42,7 +42,8 @@
 			showDropdown = false;
 			goto('/');
 			currentPage = '/';
-		}}><img src={logo} alt="logo" class:current={currentPage === '/'} />
+		}}
+		><img src={logo} alt="logo" class:current={currentPage === '/'} />
 	</button>
 
 	<div class="links" class:hide={smallPage}>
@@ -57,7 +58,8 @@
 	<button
 		class="dropdown-btn"
 		on:click={() => (showDropdown = !showDropdown)}
-		class:hide={!smallPage}><Icon icon="ri:more-fill" width='50' />
+		class:hide={!smallPage}
+		><Icon icon="ri:more-fill" width="50" />
 	</button>
 </div>
 

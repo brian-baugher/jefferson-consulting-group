@@ -3,9 +3,9 @@
 	import InfoSection from '$lib/InfoSection.svelte';
 	import lecture from '$lib/assets/lecture.jpg';
 	import memorial from '$lib/assets/memorial.jpg';
-	import hilton from '$lib/assets/hilton.jpg'
-	import company from '$lib/assets/company.jpg'
-	
+	import hilton from '$lib/assets/hilton.jpg';
+	import company from '$lib/assets/company.jpg';
+
 	let width = 0;
 	$: mobile = width < 850;
 </script>
@@ -19,7 +19,7 @@
 	<InfoBox>
 		<h1 class="info">Our Mission</h1>
 		<p class="info">Ex dolor ea consequat ex laborum.</p>
-	</InfoBox>	
+	</InfoBox>
 </div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
@@ -31,53 +31,68 @@
 </div>
 <div class="banner" class:mobile>
 	<InfoBox {mobile}>
-		<h1 class="info" class:mobile>Our Sponsors</h1> <!--add a wraper div when we add more logos-->
+		<h1 class="info" class:mobile>Our Sponsors</h1>
+		<!--add a wraper div when we add more logos-->
 		<div class="sponsor-container">
 			<div class="hilton sponsor-row" class:mobile>
-				<a href='https://www.hilton.com/en/' target="_blank"> 
-					<img class='info' src={hilton} alt="hilton"/>
+				<a href="https://www.hilton.com/en/" target="_blank">
+					<img class="info" src={hilton} alt="hilton" />
 				</a>
-				<p class="info small">Excepteur eiusmod anim incididunt enim occaecat cillum nulla consectetur incididunt pariatur ullamco irure velit. Incididunt proident eiusmod exercitation ullamco labore id dolor in fugiat. Minim et dolor mollit eu ipsum laboris mollit fugiat Lorem ad. Laboris ut mollit mollit reprehenderit consectetur eu cillum in. Eiusmod labore magna est esse quis.</p>
+				<p class="info small">
+					Excepteur eiusmod anim incididunt enim occaecat cillum nulla consectetur incididunt
+					pariatur ullamco irure velit. Incididunt proident eiusmod exercitation ullamco labore id
+					dolor in fugiat. Minim et dolor mollit eu ipsum laboris mollit fugiat Lorem ad. Laboris ut
+					mollit mollit reprehenderit consectetur eu cillum in. Eiusmod labore magna est esse quis.
+				</p>
 			</div>
 			<div class="sponsor-row" class:mobile>
-				<a href='https://www.google.com/' target="_blank"> 
-					<img class="info" src={company} alt='company' />
+				<a href="https://www.google.com/" target="_blank">
+					<img class="info" src={company} alt="company" />
 				</a>
-				<p class="info small">Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris. Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse. Mollit cupidatat non adipisicing id aliquip pariatur.</p>
+				<p class="info small">
+					Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris.
+					Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat
+					sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse.
+					Mollit cupidatat non adipisicing id aliquip pariatur.
+				</p>
 			</div>
 			<div class="sponsor-row" class:mobile>
-				<a href='https://www.google.com/' target="_blank"> 
-					<img class="info" src={company} alt='company' />
+				<a href="https://www.google.com/" target="_blank">
+					<img class="info" src={company} alt="company" />
 				</a>
-				<p class="info small">Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris. Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse. Mollit cupidatat non adipisicing id aliquip pariatur.</p>
+				<p class="info small">
+					Dolore officia tempor occaecat eiusmod sint duis amet. Ex deserunt minim ut laboris.
+					Excepteur laborum fugiat id elit exercitation. Aliquip est laborum culpa mollit consequat
+					sit dolor consequat minim minim. Sit culpa ipsum laboris culpa pariatur aliquip esse.
+					Mollit cupidatat non adipisicing id aliquip pariatur.
+				</p>
 			</div>
 		</div>
-		
 	</InfoBox>
 </div>
 
 <style>
-	h1.mobile{
+	h1.mobile {
 		font-size: 5cqh !important;
 	}
-	.sponsor-container{
+	.sponsor-container {
 		display: flex;
 		flex-direction: column;
 		gap: 2vh;
 	}
-	.sponsor-row{
+	.sponsor-row {
 		display: flex;
 		align-items: center;
 		gap: 10%;
 	}
-	.mobile.sponsor-row{
+	.mobile.sponsor-row {
 		flex-direction: column;
 	}
-	.mobile.sponsor-row img{
+	.mobile.sponsor-row img {
 		height: 25cqh;
 		width: 25cqh;
 	}
-	.mobile.sponsor-row p{
+	.mobile.sponsor-row p {
 		font-size: 2cqh !important;
 		text-align: center;
 	}
@@ -100,14 +115,14 @@
 	p.info {
 		font-size: 3cqmin;
 	}
-	img.info{
+	img.info {
 		height: 17vmin;
 		width: 17vmin;
 	}
-	.small{
+	.small {
 		font-size: 2cqmin !important;
 	}
-	.sponsor-row > a{
+	.sponsor-row > a {
 		border: none;
 		margin: 0;
 		padding: 0;
@@ -116,10 +131,10 @@
 		box-sizing: border-box;
 		align-items: center;
 		display: flex;
-		transition: .5s all ease;
+		transition: 0.5s all ease;
 	}
 
-	.sponsor-row > a:hover{
+	.sponsor-row > a:hover {
 		transform: scale(110%);
 	}
 </style>

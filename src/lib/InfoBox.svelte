@@ -19,7 +19,7 @@
 </div>
 
 <style>
-	div.mobile{
+	div.mobile {
 		width: 95%;
 		height: 95%;
 	}

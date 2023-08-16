@@ -14,11 +14,11 @@
 -->
 
 <script lang="ts">
-	export let mobile : boolean;
-	export let title : string;
-	export let text : string;
+	export let mobile: boolean;
+	export let title: string;
+	export let text: string;
 	/** path to image, typically from an import statement ex: 'import image from ./someImage.jpg' ... picture={image} */
-	export let picture : string;
+	export let picture: string;
 	/** default assumes you left-align this component (with text auto-aliging on the right),
 	 * set this to true if you've right-aligned this component (puts text on left) */
 	export let right = false;
