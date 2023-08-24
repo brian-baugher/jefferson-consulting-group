@@ -10,7 +10,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
-	import logo from '$lib/assets/globe-4-64.png';
+	import logo from '$lib/assets/svgJCGLogo.svg';
 	import Icon from '@iconify/svelte';
 
 	let currentPage: string;
@@ -150,7 +150,7 @@
 	img {
 		color: lightgray;
 		flex: 1;
-		height: 4cqh;
+		height: 10cqh;
 	}
 	.hide {
 		display: none;
