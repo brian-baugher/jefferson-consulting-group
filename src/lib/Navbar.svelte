@@ -152,6 +152,9 @@
 		flex: 1;
 		height: 10cqh;
 	}
+	img:hover {
+		cursor: pointer;
+	}
 	.hide {
 		display: none;
 	}
