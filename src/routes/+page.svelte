@@ -13,7 +13,7 @@
 <div class="landing" style="background-image: url({background});">
 	<h1>Jefferson Consulting Group</h1>
 	<p>Virginia's leading consultants</p>
-	<button>Join today</button>
+	<button><a target="_blank" href="https://forms.gle/EMuD4AZRYrLfSikL9">Join today</a></button>
 </div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
@@ -45,5 +45,9 @@
 		background-color: transparent;
 		color: white;
 		z-index: 1;
+	}
+	button > a {
+		color: inherit;
+		text-decoration: none;
 	}
 </style>
