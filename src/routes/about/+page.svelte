@@ -18,20 +18,20 @@
 <div class="small-banner">
 	<InfoBox>
 		<h1 class="info">Our Mission</h1>
-		<p class="info">Ex dolor ea consequat ex laborum.</p>
+		<p class="info">To drive measurable impact through curiosity, growth, and sustainability</p>
 	</InfoBox>
 </div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
-		title="Title"
-		text="Exercitation in veniam sint occaecat nostrud in veniam est quis sunt mollit in. Quis amet cillum enim ipsum consectetur adipisicing labore ad laboris sint cupidatat. Aliquip aliqua ipsum dolore eu ex minim tempor laborum excepteur proident deserunt nulla."
+		title="Why JCG?"
+		text="For companies seeking to support future business leaders while gaining invaluable insights through an unique opportunity, our teams are the perfect match for you. We are a trusted partner bringing a fresh perspective, data-driven insights, and actionable strategies to drive tangible results and sustainable growth in an ever-evolving business landscape."
 		picture={lecture}
 		{mobile}
 	/>
 </div>
 <div class="banner" class:mobile>
 	<InfoBox {mobile}>
-		<h1 class="info" class:mobile>Our Sponsors</h1>
+		<h1 class="info" class:mobile>Our Fall 2023 Clients</h1>
 		<!--add a wraper div when we add more logos-->
 		<div class="sponsor-container">
 			<div class="hilton sponsor-row" class:mobile>
@@ -69,6 +69,9 @@
 			</div>
 		</div>
 	</InfoBox>
+</div>
+<div class='banner' class:mobile>
+	<h1>contact form</h1>
 </div>
 
 <style>
@@ -114,6 +117,7 @@
 	}
 	p.info {
 		font-size: 3cqmin;
+		text-align: center;
 	}
 	img.info {
 		height: 17vmin;
