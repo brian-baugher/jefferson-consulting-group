@@ -3,6 +3,7 @@
 	import InfoSection from '$lib/InfoSection.svelte';
 	import cavman from '$lib/assets/cavman.jpg';
 	import jpj from '$lib/assets/jpj.jpg';
+	import { INTEREST_FORM_LINK } from '$lib/variables';
 
 	let width = 0;
 	$: mobile = width < 850;
@@ -13,7 +14,7 @@
 <div class="landing" style="background-image: url({background});">
 	<h1>Jefferson Consulting Group</h1>
 	<p>Virginia's leading consultants</p>
-	<button><a target="_blank" href="https://forms.gle/EMuD4AZRYrLfSikL9">Join today</a></button>
+	<button><a target="_blank" href={INTEREST_FORM_LINK} >Join today</a></button>
 </div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
