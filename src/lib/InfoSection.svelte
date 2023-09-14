@@ -1,11 +1,26 @@
-<script>
-	/**@type {boolean}*/
-	export let mobile;
-	/**@type {String}*/
-	export let title;
-	/**@type {String}*/
-	export let text;
-	export let picture;
+<!--
+	@component
+	Styled component with preset layout to display information passed via props
+
+	Usage:
+	```tsx
+	<InfoSection
+		title = 'My Title'
+		text = 'Officia ut occaecat nulla elit incididunt ipsum laborum laboris.'
+		{mobile}
+		picture = {image}
+	/>
+	```
+-->
+
+<script lang="ts">
+	export let mobile: boolean;
+	export let title: string;
+	export let text: string;
+	/** path to image, typically from an import statement ex: 'import image from ./someImage.jpg' ... picture={image} */
+	export let picture: string;
+	/** default assumes you left-align this component (with text auto-aliging on the right),
+	 * set this to true if you've right-aligned this component (puts text on left) */
 	export let right = false;
 </script>
 

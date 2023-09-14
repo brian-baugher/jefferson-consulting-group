@@ -1,4 +1,16 @@
-<script>
+<!--
+	@component
+	Composable styled section wrapping a default slot
+
+	Usage:
+	```tsx
+	<InfoBox {mobile}>
+		<div> your content </div>
+	</InfoBox>
+	```
+-->
+
+<script lang="ts">
 	export let mobile = false;
 </script>
 
@@ -7,7 +19,7 @@
 </div>
 
 <style>
-	div.mobile{
+	div.mobile {
 		width: 95%;
 		height: 95%;
 	}

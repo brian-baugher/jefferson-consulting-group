@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import background from '$lib/assets/uva_rotunda_dome.jpg';
 	import InfoSection from '$lib/InfoSection.svelte';
 	import cavman from '$lib/assets/cavman.jpg';
 	import jpj from '$lib/assets/jpj.jpg';
+	import { INTEREST_FORM_LINK } from '$lib/variables';
+
 	let width = 0;
 	$: mobile = width < 850;
 </script>
@@ -12,14 +14,16 @@
 <div class="landing" style="background-image: url({background});">
 	<h1>Jefferson Consulting Group</h1>
 	<p>Virginia's leading consultants</p>
-	<button>Join today</button>
+	<button><a target="_blank" href={INTEREST_FORM_LINK} >Join today</a></button>
 </div>
 <div class="banner left-image" class:mobile>
 	<InfoSection
 		{mobile}
 		picture={cavman}
-		title="Title"
-		text="Mollit anim commodo laboris officia reprehenderit id cupidatat eiusmod ad ad enim. Dolor id exercitation magna occaecat sit mollit ad eu aliqua sint. Commodo culpa veniam occaecat officia ullamco amet velit dolor laborum proident commodo officia ullamco. Fugiat consequat commodo ut labore voluptate duis ex dolor deserunt dolore irure. Non do exercitation elit duis deserunt mollit."
+		title="Who We Are"
+		text="Jefferson Consulting Group (JCG) is a pro-bono consulting group founded by students at the University of Virginia's McIntire School of Commerce.
+		 JCG is comprised of undergraduate students currently studying at the University of Virginia. Our teams offer a diverse range of backgrounds and work
+		 experience/mentorship at top firms within industries ranging from advisory to technology to investment banking."
 	/>
 </div>
 <div class="banner right-image" class:mobile>
@@ -27,8 +31,9 @@
 		right
 		{mobile}
 		picture={jpj}
-		title="Title"
-		text="Nostrud ut sit exercitation incididunt est dolor ullamco amet eu quis. Laborum labore duis qui ea aute consectetur labore elit aute ex consectetur in occaecat. Officia nulla proident esse do dolor nisi excepteur. Exercitation deserunt consectetur veniam voluptate consequat nisi ea laborum reprehenderit occaecat nulla. Aliqua cupidatat ea elit id proident in velit adipisicing. Officia reprehenderit cupidatat nostrud Lorem eiusmod."
+		title="Our Philosophy"
+		text="Our philosophy and passion revolve around curiosity, growth, sustainability, and driving measurable impact.
+		 We fuel our intellectual curiosity and strong problem solving skills into providing innovatice consulting services for our clients."
 	/>
 </div>
 
@@ -44,5 +49,9 @@
 		background-color: transparent;
 		color: white;
 		z-index: 1;
-	}	
+	}
+	button > a {
+		color: inherit;
+		text-decoration: none;
+	}
 </style>
